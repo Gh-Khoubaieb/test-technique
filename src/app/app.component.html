@@ -1,0 +1,108 @@
+<!--
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side ">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+
+    <app-config-side-bar></app-config-side-bar>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+
+
+  </div>
+
+</mat-drawer-container>
+
+ -->
+
+
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+
+    <h3 class="text-light">    <mat-icon>build</mat-icon> User Configuration</h3>
+    <!--     <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button> -->
+
+  </mat-drawer>
+
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>User CRM</span>
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="primary"><mat-icon>add_circle</mat-icon> Add</button>
+    <button mat-raised-button color="primary" (click)="LoadListUsersFromJson()"><mat-icon>cached</mat-icon> Load</button>
+  </mat-toolbar>
+  <div class="example-sidenav-content">
+    <!--
+        <button type="button" >
+      Toggle sidenav
+    </button>
+     -->
+
+
+
+
+
+
+    <div class="example-button-row m-0">
+      <!--    <button mat-raised-button color="primary"><mat-icon>add_circle</mat-icon> Add</button>
+        <button mat-raised-button color="primary" (click)="LoadListUsersFromJson()"><mat-icon>cached</mat-icon> Load</button>
+
+
+        <a mat-raised-button href="https://www.google.com/" target="_blank" class="btn-primary btn">Add</a>-->
+    </div>
+
+    <!--    <app-user-card (click)="drawer.toggle()"></app-user-card>-->
+    <div class="container *ngIf="listUsers.length != 0" style="border: greenyellow solid">
+
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile > aaaa</mat-grid-tile>
+        <ng-container >
+          <mat-grid-tile>
+s
+s
+          </mat-grid-tile>
+          <mat-grid-tile>
+   ssss
+          </mat-grid-tile>
+          <mat-grid-tile>
+            ssss
+          </mat-grid-tile>
+          <mat-grid-tile>
+            ssss
+          </mat-grid-tile>     <mat-grid-tile>
+          ssss
+        </mat-grid-tile>
+          <mat-grid-tile>
+            ssss
+          </mat-grid-tile>
+          <mat-grid-tile>
+            ssss
+          </mat-grid-tile>
+
+
+        </ng-container>
+      </mat-grid-list>
+    </div>
+
+
+  </div>
+
+</mat-drawer-container>
+
+
+
+
+
