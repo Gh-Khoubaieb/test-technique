@@ -13,22 +13,23 @@
       </mat-form-field> -->
       <mat-form-field appearance="outline">
         <mat-label>Nom</mat-label>
-        <input matInput placeholder="Placeholder" [value]="user._nom" disabled>
+        <input matInput placeholder="Placeholder" [(ngModel)]="user._nom" disabled name="nom">
 
       </mat-form-field>
 
 <p>
       <mat-form-field appearance="outline">
         <mat-label>Prénom</mat-label>
-        <input matInput placeholder="Placeholder" [value]="user._prenom" disabled>
+        <input matInput placeholder="Placeholder" [(ngModel)]="user._prenom" disabled name="prenom">
       </mat-form-field>
 </p>
       <mat-form-field appearance="outline">
         <mat-label>Nombre d'enfants</mat-label>
-        <input matInput placeholder="Placeholder" [value]="user._nombre_enfants"  type="number">
+        <input matInput placeholder="Placeholder"  [(ngModel)]="user._nombre_enfants"  type="number" name="enfant">
       </mat-form-field>
 
-
+      <br>
+      <button mat-raised-button color="primary"> Enregistrer</button>
 
     </form>
 

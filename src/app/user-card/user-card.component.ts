@@ -12,6 +12,7 @@ export class UserCardComponent implements OnInit {
   constructor() { }
   @Input() user   ;
   //@Output() userCard = this.user ;
+  val: string = '';
   ngOnInit(): void {
     console.log('user', this.user)
   }

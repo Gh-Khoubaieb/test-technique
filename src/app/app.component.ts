@@ -12,7 +12,8 @@ export class AppComponent implements OnInit{
   title = 'test-technique';
   listUsers:User[]=[];
   showFiller = false;
-    @Input() userCard ;
+  val: string = '';
+  @Input() userCard ;
   ngOnInit(): void {
     //this.LoadListUsersFromJson();
   }
