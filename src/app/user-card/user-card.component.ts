@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
+import {User} from '../entity/User';
+import {ApiUsersService} from '../services/api-users.service';
 
 @Component({
   selector: 'app-user-card',
@@ -8,8 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class UserCardComponent implements OnInit {
 
   constructor() { }
-
+  @Input() user   ;
+  //@Output() userCard = this.user ;
   ngOnInit(): void {
+    console.log('user', this.user)
   }
 
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {User} from './entity/User';
 import {HttpClient} from '@angular/common/http';
 import {ApiUsersService} from './services/api-users.service';
@@ -12,7 +12,7 @@ export class AppComponent implements OnInit{
   title = 'test-technique';
   listUsers:User[]=[];
   showFiller = false;
-
+    @Input() userCard ;
   ngOnInit(): void {
     //this.LoadListUsersFromJson();
   }

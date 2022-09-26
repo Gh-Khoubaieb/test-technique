@@ -2,7 +2,8 @@
 
 <mat-card class="mat-elevation-z2">
   <mat-card-title>
-    Informations de l'utilisateur</mat-card-title>
+ <h3>  Informations de l'utilisateur {{user.id}} </h3>
+  </mat-card-title>
 
   <mat-card-actions>
     <form class="example-form">
@@ -12,18 +13,19 @@
       </mat-form-field> -->
       <mat-form-field appearance="outline">
         <mat-label>Nom</mat-label>
-        <input matInput placeholder="Placeholder">
+        <input matInput placeholder="Placeholder" [value]="user._nom" disabled>
+
       </mat-form-field>
 
 <p>
       <mat-form-field appearance="outline">
         <mat-label>Prénom</mat-label>
-        <input matInput placeholder="Placeholder">
+        <input matInput placeholder="Placeholder" [value]="user._prenom" disabled>
       </mat-form-field>
 </p>
       <mat-form-field appearance="outline">
         <mat-label>Nombre d'enfants</mat-label>
-        <input matInput placeholder="Placeholder" value="2" disabled>
+        <input matInput placeholder="Placeholder" [value]="user._nombre_enfants"  type="number">
       </mat-form-field>
 
 

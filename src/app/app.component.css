@@ -25,7 +25,7 @@
 
 
 mat-grid-tile {
-  background: lightblue;
+  /*background: lightblue;*/
 }
 .example-label {
   display: table-cell;

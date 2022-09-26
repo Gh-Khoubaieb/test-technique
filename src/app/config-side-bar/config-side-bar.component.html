@@ -1,1 +1,36 @@
-<p>config-side-bar works!</p>
+
+<mat-card class="mat-elevation-z2">
+  <mat-card-title>
+    <h3>  Informations de l'utilisateur {{userCard.id}} </h3>
+  </mat-card-title>
+
+  <mat-card-actions>
+    <form class="example-form">
+      <!--       <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nom</mat-label>
+        <input matInput placeholder="Ex. Jhon" value="Jhon">
+      </mat-form-field> -->
+      <mat-form-field appearance="outline">
+        <mat-label>Nom</mat-label>
+        <input matInput placeholder="Placeholder" [value]="userCard._nom">
+
+      </mat-form-field>
+
+      <p>
+        <mat-form-field appearance="outline">
+          <mat-label>Prénom</mat-label>
+          <input matInput placeholder="Placeholder" [value]="userCard._prenom">
+        </mat-form-field>
+      </p>
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre d'enfants</mat-label>
+        <input matInput placeholder="Placeholder" [value]="userCard._nombre_enfants" disabled>
+      </mat-form-field>
+
+
+
+    </form>
+
+  </mat-card-actions>
+</mat-card>
+
