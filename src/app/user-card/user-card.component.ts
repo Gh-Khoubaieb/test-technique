@@ -9,7 +9,7 @@ import {ApiUsersService} from '../services/api-users.service';
 })
 export class UserCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private  apiUserService: User) { }
   @Input() user   ;
   //@Output() userCard = this.user ;
   val: string = '';
@@ -17,4 +17,11 @@ export class UserCardComponent implements OnInit {
     console.log('user', this.user)
   }
 
+  save( user) {
+    this.apiUserService.nombre_enfantss(100) ;
+
+
+    console.log("this.apiUserService.nombre_enfants",  this.apiUserService.nombre_enfantss)
+    console.log("dtata  usss",  user._nombre_enfants)
+  }
 }

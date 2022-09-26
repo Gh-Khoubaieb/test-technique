@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ConfigSideBarComponent } from './config-side-bar/config-side-bar.component';
 import { UserCardComponent } from './user-card/user-card.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule, NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {HttpClientModule} from '@angular/common/http';
 import {MatTabsModule} from '@angular/material/tabs';
@@ -41,6 +41,8 @@ import {FormsModule} from '@angular/forms';
     MatInputModule,
     MatDividerModule,
     FormsModule,
+    BrowserAnimationsModule
+
 
 
   ],

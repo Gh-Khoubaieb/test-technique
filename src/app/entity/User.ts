@@ -1,3 +1,8 @@
+import {Injectable} from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
 export class User{
   private _nom;
   private _prenom;
@@ -23,7 +28,7 @@ export class User{
     return this._nombre_enfants;
   }
 
-  set nombre_enfants(value) {
+  set nombre_enfantss(value) {
     this._nombre_enfants = value;
   }
 }

@@ -32,6 +32,13 @@ export class AppComponent implements OnInit{
   /*
   * @ToDo
   * */
-  SaveListUsersInJson(){}
+  SaveListUsersInJson(){
+    this.apiUserService.updateUser(this.userCard).subscribe(data =>{
+      console.log('new data', data);}
+
+
+
+    )
+  }
 
 }

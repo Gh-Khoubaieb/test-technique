@@ -1,10 +1,10 @@
 
-<mat-card class="mat-elevation-z2">
+<mat-card class="mat-elevation-z14 pt-5"  style="margin: auto; background-color: white; height: 50%; width: 80%   ; margin-top: 10em">
   <mat-card-title>
-    <h3>  Informations de l'utilisateur {{userCard.id}} </h3>
+    <h3> <mat-icon>settings</mat-icon> Configuration  </h3>
   </mat-card-title>
 
-  <mat-card-actions>
+  <mat-card-actions style="margin-top: 3em">
     <form class="example-form">
       <!--       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Nom</mat-label>
@@ -12,23 +12,24 @@
       </mat-form-field> -->
       <mat-form-field appearance="outline">
         <mat-label>Nom</mat-label>
-        <input matInput placeholder="Placeholder" [(ngModel)]="userCard._nom" name="nom">
+        <input matInput placeholder="Nom" [(ngModel)]="userCard._nom" name="nom">
 
       </mat-form-field>
 
       <p>
         <mat-form-field appearance="outline">
           <mat-label>Prénom</mat-label>
-          <input matInput placeholder="Placeholder" [(ngModel)]="userCard._prenom" name="prenom">
+          <input matInput placeholder="Prénom" [(ngModel)]="userCard._prenom" name="prenom">
         </mat-form-field>
       </p>
       <mat-form-field appearance="outline">
         <mat-label>Nombre d'enfants</mat-label>
-        <input matInput placeholder="Placeholder" [(ngModel)]="userCard._nombre_enfants" disabled name="enfant">
+        <input matInput placeholder="Nombre d'enfants" [(ngModel)]="userCard._nombre_enfants" disabled name="enfant" min="0">
       </mat-form-field>
-
+      <!--
       <br>
       <button  mat-raised-button color="primary"> Enregistrer</button>
+      -->
     </form>
 
   </mat-card-actions>

@@ -18,5 +18,13 @@ export class ApiUsersService {
   return this.httpClient.get<User[]>(`${this._jsonUrl}`)
 }
 
+  updateUser( user: User): Observable<User>{
+    //console.log('bien from service', user)
+    return this.httpClient.put<User>(`${this._jsonUrl}`+"blallvlb", user);
+
+
+  }
+
+
 
 }

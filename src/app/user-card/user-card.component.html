@@ -1,8 +1,10 @@
 
 
-<mat-card class="mat-elevation-z2">
-  <mat-card-title>
- <h3>  Informations de l'utilisateur {{user.id}} </h3>
+<mat-card class="mat-elevation-z14 col-9 card-user" style="border: #233044 solid 1px">
+  <mat-card-title style="display: flex; flex-direction: row; justify-content: space-between">
+ <h3>  Utilisateur {{user.id}} </h3>
+    <!--   <button mat-raised-button color="primary"><mat-icon  color="primary">delete</mat-icon></button>-->
+    <mat-icon  style="color: #233044">delete</mat-icon>
   </mat-card-title>
 
   <mat-card-actions>
@@ -25,12 +27,12 @@
 </p>
       <mat-form-field appearance="outline">
         <mat-label>Nombre d'enfants</mat-label>
-        <input matInput placeholder="Placeholder"  [(ngModel)]="user._nombre_enfants"  type="number" name="enfant">
+        <input matInput placeholder="Nombre d'enfants"  [(ngModel)]="user._nombre_enfants"  type="number" name="enfant" min="0">
       </mat-form-field>
-
+      <!--
       <br>
-      <button mat-raised-button color="primary"> Enregistrer</button>
-
+      <button mat-raised-button color="primary" (click)="save(user)"> Enregistrer</button>
+-->
     </form>
 
   </mat-card-actions>
