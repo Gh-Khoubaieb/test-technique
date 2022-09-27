@@ -1,6 +1,6 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
-import {User} from '../entity/User';
-import {ApiUsersService} from '../services/api-users.service';
+import {Component, Input, OnInit} from '@angular/core';
+
+
 
 @Component({
   selector: 'app-user-card',
@@ -9,19 +9,12 @@ import {ApiUsersService} from '../services/api-users.service';
 })
 export class UserCardComponent implements OnInit {
 
-  constructor(private  apiUserService: User) { }
+  constructor() { }
   @Input() user   ;
-  //@Output() userCard = this.user ;
-  val: string = '';
+
   ngOnInit(): void {
-    console.log('user', this.user)
+
   }
 
-  save( user) {
-    this.apiUserService.nombre_enfantss(100) ;
 
-
-    console.log("this.apiUserService.nombre_enfants",  this.apiUserService.nombre_enfantss)
-    console.log("dtata  usss",  user._nombre_enfants)
-  }
 }

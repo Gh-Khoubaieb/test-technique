@@ -12,10 +12,10 @@ export class AppComponent implements OnInit{
   title = 'test-technique';
   listUsers:User[]=[];
   showFiller = false;
-  val: string = '';
+
   @Input() userCard ;
   ngOnInit(): void {
-    //this.LoadListUsersFromJson();
+
   }
   constructor(private apiUserService: ApiUsersService) {
   }
@@ -24,7 +24,6 @@ export class AppComponent implements OnInit{
   * */
   LoadListUsersFromJson(){
     return this.apiUserService.getUsers().subscribe( data =>{
-      console.log('users data', data);
       this.listUsers = data ;
     })
   }
@@ -34,11 +33,11 @@ export class AppComponent implements OnInit{
   * */
   SaveListUsersInJson(){
     this.apiUserService.updateUser(this.userCard).subscribe(data =>{
-      console.log('new data', data);}
+
+    this.listUsers.push( data);
 
 
-
-    )
+  })
   }
 
 }

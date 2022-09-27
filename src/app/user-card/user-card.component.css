@@ -23,14 +23,13 @@
 }
 
 mat-icon{
-  color: #233044;
+
+  color: #233044
 }
 mat-icon:hover{
  cursor: pointer;
 }
-mat-form-field{
-  width: 210px!important;
-}
+
 
 
 .user-title {
@@ -42,4 +41,14 @@ mat-form-field{
 }
 .mat-form-field{
   width:80% !important;
+}
+
+mat-card-actions{
+  margin-left: 10px
+}
+
+mat-card-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
 }

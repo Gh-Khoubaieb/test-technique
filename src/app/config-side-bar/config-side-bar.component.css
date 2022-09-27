@@ -9,7 +9,10 @@ background-color: #F7F9FC;
   border-radius: 10px;
 
   background-image: none;
-  margin:20px auto;
+
+  margin: auto;
+  background-color: white;
+  margin-top: 10em;
 }
 .mat-form-field-infix{
   width: 210px;
@@ -29,4 +32,9 @@ background-color: #F7F9FC;
 }
 .mat-form-field{
   width:80% !important;
+}
+
+mat-card-actions{
+  margin-top: 3em;
+  margin-left: 10px
 }

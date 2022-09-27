@@ -1,18 +1,15 @@
 
 
-<mat-card class="mat-elevation-z4 col-9 card-user" style="border: #233s044 solid 1px">
-  <mat-card-title style="display: flex; flex-direction: row; justify-content: space-between">
+<mat-card class="mat-elevation-z4 col-9 card-user" >
+  <mat-card-title style="">
  <h3 class="user-title">  Utilisateur {{user.id}} </h3>
-    <!--   <button mat-raised-button color="primary"><mat-icon  color="primary">delete</mat-icon></button>-->
-    <mat-icon  style="color: #233044">delete</mat-icon>
+
+    <mat-icon  >delete</mat-icon>
   </mat-card-title>
 
-  <mat-card-actions style="margin-left: 10px">
+  <mat-card-actions >
     <form class="example-form">
-      <!--       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Nom</mat-label>
-        <input matInput placeholder="Ex. Jhon" value="Jhon">
-      </mat-form-field> -->
+
       <mat-form-field appearance="outline">
         <mat-label>Nom</mat-label>
         <input matInput placeholder="Placeholder" [(ngModel)]="user._nom" disabled name="nom">
@@ -27,12 +24,9 @@
 </p>
       <mat-form-field appearance="outline">
         <mat-label>Nombre d'enfants</mat-label>
-        <input matInput placeholder="Nombre d'enfants"  [(ngModel)]="user._nombre_enfants"  type="number" name="enfant" min="0">
+        <input matInput placeholder="Nombre d'enfants"  [(ngModel)]="user._nombre_enfants"  name="enfant" min="0"  type="number">
       </mat-form-field>
-      <!--
-      <br>
-      <button mat-raised-button color="primary" (click)="save(user)"> Enregistrer</button>
--->
+
     </form>
 
   </mat-card-actions>

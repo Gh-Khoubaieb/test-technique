@@ -1,15 +1,12 @@
 
-<mat-card class="mat-elevation-z14 pt-5 card-user col-12"  style="margin: auto; background-color: white; margin-top: 10em">
+<mat-card class="mat-elevation-z14 pt-5 card-user col-12"  >
   <mat-card-title>
     <h3 class="configuration"> <mat-icon>settings</mat-icon> Configuration user {{userCard.id}} </h3>
   </mat-card-title>
 
-  <mat-card-actions style="margin-top: 3em; margin-left: 10px">
+  <mat-card-actions >
     <form class="example-form">
-      <!--       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Nom</mat-label>
-        <input matInput placeholder="Ex. Jhon" value="Jhon">
-      </mat-form-field> -->
+
       <mat-form-field appearance="outline">
         <mat-label>Nom</mat-label>
         <input matInput placeholder="Nom" [(ngModel)]="userCard._nom" name="nom">
@@ -24,12 +21,9 @@
       </p>
       <mat-form-field appearance="outline">
         <mat-label>Nombre d'enfants</mat-label>
-        <input matInput placeholder="Nombre d'enfants" [(ngModel)]="userCard._nombre_enfants" disabled name="enfant" min="0">
+        <input matInput placeholder="Nombre d'enfants" [(ngModel)]="userCard._nombre_enfants" disabled name="enfant" min="0" type="number">
       </mat-form-field>
-      <!--
-      <br>
-      <button  mat-raised-button color="primary"> Enregistrer</button>
-      -->
+
     </form>
 
   </mat-card-actions>
