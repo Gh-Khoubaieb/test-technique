@@ -23,19 +23,19 @@
  -->
 
 
-<mat-drawer-container class="example-container "  autosize style="background-color: white">
+<mat-drawer-container class="example-container "  autosize style="background-color: #F7F9FC">
 
-  <mat-drawer #drawer  class="example-sidenav col-sm-4  col-xl-3 col-lg-4 col-10" mode="side" >
+  <mat-drawer #drawer  class="example-sidenav col-sm-6  col-md-5 col-xl-4 col-lg-6 col-10" mode="over" >
 
 
     <!--     <h3 class="" style="color: white; text-align: center">    <mat-icon>settings</mat-icon> Configuration</h3>   <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
     <button (click)="showFiller = !showFiller" mat-raised-button>
       Toggle extra text
     </button> -->
-    <app-config-side-bar *ngIf="userCard != null" [userCard]="userCard"  class="mt-5" ></app-config-side-bar>
+    <app-config-side-bar *ngIf="userCard != null" [userCard]="userCard"  class="mt-5 col-xl-6 col-6"  ></app-config-side-bar>
   </mat-drawer>
 
-  <mat-toolbar color=""  class="sticky-top" style="background-color: #F7F9FC">
+  <mat-toolbar color=""  class="sticky-top" style="background-color: white">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon (click)="drawer.toggle()">menu</mat-icon>
     </button>
@@ -45,7 +45,7 @@
     <button mat-raised-button color="primary" (click)="LoadListUsersFromJson()"><mat-icon>cached</mat-icon> Load</button>
     -->
   </mat-toolbar>
-  <div class="example-sidenav-content " style="display: flex; justify-content: space-between; height: 35px; flex-direction: column">
+  <div class="example-sidenav-content " style="display: flex; justify-content: space-between; height: 35px; flex-direction: column;  background-color: #F7F9FC;">
     <!--
         <button type="button" >
       Toggle sidenav
@@ -69,8 +69,8 @@
 
 
 
-    <div class="mt-5 mb-2" style="display: flex; justify-content: space-around; height: 35px; flex-direction: row; justify-items: stretch; width: 80%; flex-wrap: wrap">
-    <h4 class="p-0" style="font-weight: bold; font-size: 23px; font-family: Arial"> Liste des utilisateurs </h4>
+    <div class="mt-5 mb-2" style="display: flex; justify-content: space-around; height: 35px; flex-direction: row; justify-items: stretch; width: 80%; flex-wrap: wrap;  background-color: #F7F9FC;">
+    <h4 class="p-0 title" > Liste des utilisateurs </h4>
 
 
 <div class="buttons" style="display: flex; justify-content: space-around; flex-direction: row; justify-items: stretch">
@@ -96,12 +96,12 @@
       <mat-divider class="mb-4 " style="margin-top: 11px"></mat-divider>
     </div>
 
-    <div class="container col-md-12" *ngIf="listUsers.length != 0"  >
+    <div class="container col-md-12 mt-5" *ngIf="listUsers.length != 0"  >
 
       <!-- style="position: relative; top: 1700px" -->
 
         <ng-container class="row card-group " *ngFor="let item of listUsers " >
-          <app-user-card  class="col-md-9 col-lg-6 col-sm-10 col-xl-4 col-12" (click)="drawer.open(); userCard=item" [user]="item" ></app-user-card>
+          <app-user-card style="margin: auto" class="col-md-9 col-lg-6 col-sm-10 col-xl-4 col-12" (click)="drawer.open(); userCard=item" [user]="item" ></app-user-card>
 
 
 
